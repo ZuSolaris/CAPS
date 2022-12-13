@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "chance": "^1.1.9"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "caps",
+  "version": "1.0.0",
+  "main": "chanceUsage.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZuSolaris/CAPS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZuSolaris/CAPS/issues"
+  },
+  "homepage": "https://github.com/ZuSolaris/CAPS#readme",
+  "description": ""
+}
