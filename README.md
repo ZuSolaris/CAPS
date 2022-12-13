@@ -49,3 +49,5 @@ Features / Routes
 /* : If the page is not available then an error flag is thrown.
 
 Workflow
+
+![WRRC](./WRRC-2.PNG)
