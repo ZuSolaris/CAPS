@@ -20,6 +20,5 @@ const deliverHandler = (payload) => {
 
 events.on('PickUp', deliverHandler);
 
-
-
+module.exports = {deliverHandler}
 

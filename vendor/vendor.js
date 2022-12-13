@@ -6,10 +6,10 @@ const chance = new Chance();
 
 setInterval(() => {
   let newDelivery = {
-    store: '1-206-flowers'
+    store: '1-206-flowers',
     name: chance.name(),
     address: chance.address(),
-id: chance.guid(),
+    id: chance.guid(),
 
 
   }
@@ -28,3 +28,5 @@ const deliveryAlert = (payload) => {
 }
 
 events.on('Drop Off', deliveryAlert);
+
+module.exports = { deliveryAlert };
