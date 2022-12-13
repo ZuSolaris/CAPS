@@ -6,6 +6,7 @@ const chance = new Chance();
 
 setInterval(() => {
   let newDelivery = {
+    store: '1-206-flowers'
     name: chance.name(),
     address: chance.address(),
 id: chance.guid(),
