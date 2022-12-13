@@ -7,7 +7,7 @@ This application is a culmination of all material learned throughout the last 2 
 
 GitHub Actions: https://github.com/ZuSolaris/Auth-Final/actions
 
-Production Deployment: https://omg-shoes.onrender.com/
+Production Deployment: 
 
 Setup
 env requirements
