@@ -1,20 +1,22 @@
 'use strict';
 const events = require('../eventPool.js');
 const Chance = require('chance');
+const { io } = require('socket.io-client');
+const vendorSocket = io('http://localhost:3001/CAPS');
 
 const chance = new Chance();
 
 setInterval(() => {
   let newDelivery = {
-    store: '1-206-flowers'
+    store: '1-206-flowers',
     name: chance.name(),
     address: chance.address(),
-id: chance.guid(),
+    id: chance.guid(),
 
 
   }
 
-  events.emit('PickUp', newDelivery);
+  vendorSocket.emit('PickUp', newDelivery);
   
   
 }, 5000);
@@ -28,3 +30,5 @@ const deliveryAlert = (payload) => {
 }
 
 events.on('Drop Off', deliveryAlert);
+
+module.exports = { deliveryAlert };

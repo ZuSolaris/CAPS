@@ -1,15 +1,16 @@
-CAPS
+# CAPS
 
 Project: Event Emitters
 Author: Zoe Gonzalez
-Problem Domain:
-This application is a culmination of all material learned throughout the last 2 weeks. It combines CRUD, routing, and authentication services. It also has compatibaility with SQL databases and moreso specifically postgres14, this project features authentication services and user role distributions. There is an embedded sample, and all of the text neccessary to run the program below.
 
-GitHub Actions: https://github.com/ZuSolaris/Auth-Final/actions
+
+This application utlizes the usage of having sockets rather than eventbased Emitters, it is very useful and modularizes the program. It is between a driver and vendor.
 
 Production Deployment: https://api.render.com/deploy/srv-cebuj1arrk0506th8630?key=vAJlBvK2Nr8
 
+
 Setup
+
 env requirements
 see .env.sample
 
@@ -48,6 +49,8 @@ Features / Routes
 
 /* : If the page is not available then an error flag is thrown.
 
-Workflow
+## Workflow
 
 ![WRRC](./WRRC-2.PNG)
+
+![WRRC](./workflow.PNG)
