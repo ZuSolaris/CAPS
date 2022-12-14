@@ -1,6 +1,8 @@
 'use strict';
 const events = require('../eventPool.js');
 const Chance = require('chance');
+const { io } = require('socket.io-client');
+const vendorSocket = io('http://localhost:3001/CAPS');
 
 const chance = new Chance();
 
@@ -14,7 +16,7 @@ setInterval(() => {
 
   }
 
-  events.emit('PickUp', newDelivery);
+  vendorSocket.emit('PickUp', newDelivery);
   
   
 }, 5000);

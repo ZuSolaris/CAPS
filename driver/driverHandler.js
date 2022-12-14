@@ -1,6 +1,7 @@
 'use strict';
 const events = require('../eventPool.js');
-
+const { io } = require('socket.io-client');
+const driverSocket = io('http://localhost:3001/CAPS');
 
 const deliverHandler = (payload) => {
 
@@ -18,7 +19,7 @@ const deliverHandler = (payload) => {
 
 }
 
-events.on('PickUp', deliverHandler);
+driverSocket.on('PickUp', deliverHandler);
 
 module.exports = {deliverHandler}
 
