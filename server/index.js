@@ -16,6 +16,13 @@ const CAPS = server.of('/CAPS');
 CAPS.on('connection', (socket) => {
   console.log('The socket has connected to the CAPS', socket.id);
 
+server.on('connection', (socket) => {
+  socket.onAny((event, payload) => console.log({event, payload}));
+})
+
+
+server.om
+
 
 socket.on('PickUp', (payload) => {
   console.log('CAPS', payload);
