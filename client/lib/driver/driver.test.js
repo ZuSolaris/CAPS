@@ -1,9 +1,11 @@
 'use strict';
 
-const { deliverHandler } = require('./driver/driverHandler.js')
-const events = require('../eventPool.js');
+const { deliverHandler } = require('./driver/driverHandler.js.js.js.js.js.js.js.js')
+const { io } = require('socket.io-client');
+const socket = io('http://localhost:3001/caps');
 
-jest.mock('../eventPool.js', () => {
+
+jest.mock(socket, () => {
   return {
     on: jest.fn(),
     emit: jest.fn(),
@@ -12,6 +14,7 @@ jest.mock('../eventPool.js', () => {
 console.log = jest.fn();
 
 describe('Driver', () => {
+  
   it('Driver Functions Work', () => {
     const payload = {
       store: '1-206-flowers',
@@ -21,6 +24,6 @@ describe('Driver', () => {
     };
     deliverHandler(payload);
     expect(console.log).toHaveBeenCalledWith(`Driver picked up package: ID ${payload.name} ${payload.address} ${payload.id}`);
-    expect(events.emit).toHaveBeenCalledWith('PickUp', deliverHandler)
+    expect(socket.emit).toHaveBeenCalledWith('PickUp', deliverHandler)
   });
 });
